@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".fragment_main">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/func_to_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/func"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="56sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical25"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal80"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/clearMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/ac"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guidelineVertical25"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/delMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:padding="10sp"
+        android:text="@string/del"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/clearMain"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/percentMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/percent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/delMain"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/equalMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/equal_main"
+        android:text="@string/equal"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal80"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/decimalMain"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/decimalMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/decimal"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal80"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/zeroMain"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/divideMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_main"
+        android:text="@string/divide"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal20"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/percentMain"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.511" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/multiplyMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_main"
+        android:padding="10sp"
+        android:text="@string/multiply"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal40"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/nineMain"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal20" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/minusMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_main"
+        android:text="@string/minus"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal60"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/sixMain"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal40"
+        app:layout_constraintVertical_bias="0.488" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_main"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal60"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal80"
+        app:layout_constraintLeft_toRightOf="@id/threemain"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/zeroMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/_0"
+        android:textAllCaps="false"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal80"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/func_to_adv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/oneMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/_1"
+        android:textAllCaps="false"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal60"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal80"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical25"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/twoMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/_2"
+        android:textAllCaps="false"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal60"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal80"
+        app:layout_constraintLeft_toRightOf="@id/oneMain"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/threemain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/_3"
+        android:textAllCaps="false"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal60"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal80"
+        app:layout_constraintLeft_toRightOf="@id/twoMain"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fourMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/_4"
+        android:textAllCaps="false"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal40"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal60"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical25"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fiveMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:padding="10sp"
+        android:text="@string/_5"
+        android:textAllCaps="false"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal40"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal60"
+        app:layout_constraintLeft_toRightOf="@id/fourMain"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sixMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/_6"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal40"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal60"
+        app:layout_constraintLeft_toRightOf="@id/fiveMain"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sevenMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/_7"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textSize="34sp"
+        app:layout_constraintRight_toRightOf="@id/guidelineVertical25"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal20"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal40"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/eightMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:padding="10sp"
+        android:text="@string/_8"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal20"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal40"
+        app:layout_constraintLeft_toRightOf="@id/sevenMain"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nineMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:padding="10sp"
+        android:text="@string/_9"
+        android:textAllCaps="false"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal40"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal20"
+        app:layout_constraintLeft_toRightOf="@id/eightMain"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/Main_fragment"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/black"-->
+    <!--    tools:context=".fragment_main">-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/func_to_adv"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:text="@string/func"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="24sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/guideline10"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical25"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/oneMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/clearMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/ac"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/guideline10"-->
+    <!--        app:layout_constraintRight_toRightOf="@id/guidelineVertical25"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/delMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:padding="10sp"-->
+    <!--        android:text="@string/del"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="30sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@+id/clearMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/percentMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/percent"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@+id/delMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/equalMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@drawable/equal_main"-->
+    <!--        android:text="@string/equal"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/decimalMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guideline85"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/addMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/decimalMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/decimal"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/zeroMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/threemain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/divideMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@drawable/operator_main"-->
+    <!--        android:text="@string/divide"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@+id/percentMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guideline85"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/multiplyMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@drawable/operator_main"-->
+    <!--        android:padding="10sp"-->
+    <!--        android:text="@string/multiply"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/nineMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guideline85"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/divideMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/minusMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@drawable/operator_main"-->
+    <!--        android:text="@string/minus"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/sixMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guideline85"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/multiplyMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/addMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@drawable/operator_main"-->
+    <!--        android:text="@string/add"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/threemain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guideline85"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/minusMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/zeroMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/_0"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/func_to_adv"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/twoMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/oneMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/_1"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/guideline10"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical25"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/fourMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/twoMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/_2"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/oneMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/fiveMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/threemain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/_3"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/twoMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/sixMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/fourMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/_4"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/guideline10"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical25"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/sevenMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/fiveMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:padding="10sp"-->
+    <!--        android:text="@string/_5"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/fourMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/eightMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/sixMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/_6"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/fiveMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/nineMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/sevenMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:text="@string/_7"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/guideline10"-->
+    <!--        app:layout_constraintRight_toRightOf="@id/guidelineVertical25"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/clearMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/eightMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:padding="10sp"-->
+    <!--        android:text="@string/_8"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/sevenMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/delMain" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+    <!--        android:id="@+id/nineMain"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        android:padding="10sp"-->
+    <!--        android:text="@string/_9"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="34sp"-->
+    <!--        app:layout_constraintDimensionRatio="1:1"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/eightMain"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/percentMain" />-->
+
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guidelineVertical25"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintGuide_percent="0.3" />-->
+
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guidelineVertical50"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintGuide_percent="0.5" />-->
+
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guidelineVertical75"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintGuide_percent="0.7" />-->
+
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideline10"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintGuide_percent="0.1" />-->
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideline85"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintGuide_percent="0.9" />-->
+
+
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

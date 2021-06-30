@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/degreeButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="DEG"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv80"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/closeBracketButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text=")"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv60"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv80"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="log"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv20"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv40"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/openBracketButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="("
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv40"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv60"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/minus_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operators_button_adv"
+        android:text="@string/minus"
+        android:textAlignment="center"
+        android:textColor=" #FFFF00"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/HorizontalGuidelineAdv6666"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv8333"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv80"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operators_button_adv"
+        android:text="@string/add"
+        android:textColor="#FFFF00"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv80"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HorizontalGuidelineAdv8333"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv8568"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/divide_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operators_button_adv"
+        android:text="@string/divide"
+        android:textColor="#FFFF00"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv4999"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv80"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HorizontalGuidelineAdv33"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/power_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/power"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/HorizontalGuidelineAdv6666"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv8333"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv60"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv80"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/equal_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/equal_custom"
+        android:text="@string/equal"
+        android:textColor=" #FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv80"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HorizontalGuidelineAdv8568"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/multiply_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operators_button_adv"
+        android:text="@string/multiply"
+        android:textColor="#FFFF00"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/HorizontalGuidelineAdv4999"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv6666"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv80"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/factorial_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/factorial"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/HorizontalGuidelineAdv8333"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv8568"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv60"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv80"
+        tools:layout_editor_absoluteX="248dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/e_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/e"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/HorizontalGuidelineAdv4999"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv6666"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv60"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv80"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sinButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/sin"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv33"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv20"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tanButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/tan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv33"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv20"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv40"
+        app:layout_constraintTop_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintVertical_bias="0.488" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sqrtButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/sqrt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv33"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv40"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv60"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lnButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/ln"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv33"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv60"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv80"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/radianButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="RAD"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv33"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv80"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pi_advance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="@string/pi"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/HorizontalGuidelineAdv33"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv4999"
+        app:layout_constraintLeft_toRightOf="@id/VerticalGuidelineAdv60"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv80" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cosButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:text="cos"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/HorizontalGuidelineAdv16"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/VerticalGuidelineAdv20"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/VerticalGuidelineAdv20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/VerticalGuidelineAdv40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/VerticalGuidelineAdv60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/VerticalGuidelineAdv80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+
+
+
+    <!--Horizontal Guidelines-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuidelineAdv16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1428" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuidelineAdv33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2856" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuidelineAdv30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuidelineAdv4999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4284" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuidelineAdv6666"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5712" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuidelineAdv8333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.714" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuidelineAdv8568"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8568" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuidelineAdv985"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.985" />
+
+    <include
+        layout="@layout/numeric_pad_adv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/VerticalGuidelineAdv60"
+        app:layout_constraintTop_toTopOf="@id/HorizontalGuidelineAdv30"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

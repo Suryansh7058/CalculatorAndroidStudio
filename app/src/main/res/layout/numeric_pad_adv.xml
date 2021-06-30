@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context=".fragment_main">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/func_to_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/func"
+        android:textAllCaps="false"
+        android:textColor="#D70040"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical25"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal80"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/clearAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/ac"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guidelineVertical25"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/delAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:padding="10sp"
+        android:text="@string/del"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal20"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/clearAdv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/percentAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/percent"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/delAdv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/decimalAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/decimal"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal80"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/zeroAdv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/zeroAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/_0"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/guidelineVertical25"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal80"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/oneAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/_1"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal60"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal80"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical25"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/twoAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/_2"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal60"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal80"
+        app:layout_constraintLeft_toRightOf="@id/oneAdv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/threeAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/_3"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal60"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal80"
+        app:layout_constraintLeft_toRightOf="@id/twoAdv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fourAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/_4"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal40"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal60"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical25"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fiveAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:padding="10sp"
+        android:text="@string/_5"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal40"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal60"
+        app:layout_constraintLeft_toRightOf="@id/fourAdv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sixAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/_6"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal40"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal60"
+        app:layout_constraintLeft_toRightOf="@id/fiveAdv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sevenAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/_7"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="@id/guidelineVertical25"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal20"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal40"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/eightAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:padding="10sp"
+        android:text="@string/_8"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal20"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal40"
+        app:layout_constraintLeft_toRightOf="@id/sevenAdv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical50"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nineAdv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:padding="10sp"
+        android:text="@string/_9"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal40"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/eightAdv"
+        app:layout_constraintRight_toLeftOf="@id/guidelineVertical75"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/cardview_dark_background"
+        app:layout_constraintGuide_percent="0.3333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6666" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9999" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal80"
+        android:layout_width="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

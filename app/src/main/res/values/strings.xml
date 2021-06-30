@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="ac">AC</string>
+    <string name="del">⌫</string>
+    <string name="neg">NEG</string>
+    <string name="decimal">.</string>
+    <string name="percent">%</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_0">0</string>
+    <string name="sin">sin</string>
+    <string name="tan">tan</string>
+    <string name="sqrt">√</string>
+    <string name="ln">ln</string>
+    <string name="divide">÷</string>
+    <string name="multiply">×</string>
+    <string name="add">+</string>
+    <string name="minus">-</string>
+    <string name="equal">=</string>
+    <string name="e">e</string>
+    <string name="blank" />
+    <string name="power">^</string>
+    <string name="factorial">n!</string>
+    <string name="pi">π</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="func">⤢</string>
+    <string name="deg">DEG</string>
+    <string name="open_bracket">)</string>
+    <string name="log">log</string>
+    <string name="closed_bracket">(</string>
+    <string name="rad">RAD</string>
+    <string name="cos">cos</string>
+
+</resources>
