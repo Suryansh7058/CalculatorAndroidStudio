@@ -41,10 +41,10 @@ public class fragment_main extends Fragment {
 
         Bundle bundle = this.getArguments();
 
-        if (bundle != null)
+        if (bundle != null){
             expression.evalExpression = bundle.getString("key");
-
-
+            expression.openBracket = bundle.getInt("openBrackets");
+        }
         AppCompatButton func_to_Adv = view.findViewById(R.id.func_to_adv);
 
         func_to_Adv.setOnClickListener(v -> {
@@ -63,19 +63,6 @@ public class fragment_main extends Fragment {
         });
 
 
-//        String res = arithmeticExpression.getText().toString();
-//        res = res.replaceAll("%","%*");
-//
-//        while(res.indexOf('π') != -1){
-//            if(res.indexOf('π') == 0 || res.charAt(res.indexOf('π') -1 )=='+' || res.charAt(res.indexOf('π') -1 )=='*' || res.charAt(res.indexOf('π') -1 )=='/'
-//                    || res.charAt(res.indexOf('π') -1 )=='-'|| res.charAt(res.indexOf('π') -1 )=='(' ){
-//                res = res.replaceFirst("π","pi");
-//            }
-//            else{
-//                res =  res.replaceFirst("π","*pi");
-//            }
-//        }
-//        expression.evalExpression = res;
 
 
         AppCompatButton seven_Main = view.findViewById(R.id.sevenMain);

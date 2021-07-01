@@ -53,6 +53,7 @@ public class advanced_operation_fragment extends Fragment {
 
             Bundle bundle = new Bundle();
             bundle.putString("key", expression.evalExpression);
+            bundle.putInt("openBrackets",expression.openBracket);
 
             fragment_main fragMain = new fragment_main();
             fragMain.setArguments(bundle);

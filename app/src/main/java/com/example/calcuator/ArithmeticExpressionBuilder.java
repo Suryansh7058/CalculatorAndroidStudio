@@ -273,7 +273,7 @@ public class ArithmeticExpressionBuilder {
                 || expression.charAt(expression.length() - 1) == 'e' || expression.charAt(expression.length() - 1) == '!'
                 || expression.charAt(expression.length() - 1) == ')')){
             evalExpression+="*"+trigono+"(";
-            return expression+"*"+trigono+"(";
+            return expression+trigono+"(";
         }
         evalExpression += trigono+"(";
         return expression +trigono+"(";
@@ -303,7 +303,7 @@ public class ArithmeticExpressionBuilder {
                 || expression.charAt(expression.length() - 1) == 'e' || expression.charAt(expression.length() - 1) == '!'
                 || expression.charAt(expression.length() - 1) == ')')){
             evalExpression+="*"+mode+"(";
-            return expression+"*"+mode+"(";
+            return expression+mode+"(";
         }
         evalExpression += mode+"(";
         return expression +mode+"(";
