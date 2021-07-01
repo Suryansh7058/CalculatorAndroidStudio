@@ -39,8 +39,10 @@ public class advanced_operation_fragment extends Fragment {
         expression = new ArithmeticExpressionBuilder();// object of builder + evaluator class(ArithmeticExpressionBuilder)
 
         Bundle mainBundle = this.getArguments();
-        if (mainBundle != null)
+        if (mainBundle != null){
             expression.evalExpression = mainBundle.getString("key");
+            expression.openBracket = mainBundle.getInt("openBrackets");
+        }
 
         calcMode = requireActivity().findViewById(R.id.calcMode);
         expression.setCalcMode("DEG");

@@ -39,8 +39,8 @@ public class fragment_main extends Fragment {
         display_result = requireActivity().findViewById(R.id.displayResult);
         expression = new ArithmeticExpressionBuilder();// object of builder + evaluator class(ArithmeticExpressionBuilder)
 
-        Bundle bundle = this.getArguments();
 
+        Bundle bundle = this.getArguments();
         if (bundle != null){
             expression.evalExpression = bundle.getString("key");
             expression.openBracket = bundle.getInt("openBrackets");
@@ -50,7 +50,7 @@ public class fragment_main extends Fragment {
         func_to_Adv.setOnClickListener(v -> {
             Bundle mainBundle = new Bundle();
             mainBundle.putString("key", expression.evalExpression);
-
+            mainBundle.putInt("openBrackets",expression.openBracket);
             advanced_operation_fragment fragAdv = new advanced_operation_fragment();
             fragAdv.setArguments(mainBundle);
 
