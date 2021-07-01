@@ -65,22 +65,6 @@ public class advanced_operation_fragment extends Fragment {
             fragmentTransaction.commit();
         });
 
-//        //Start
-//        // Views from main activity and instance of ArithmeticExpressionBuilder class
-//
-//        String res = arithmeticExpression.getText().toString();
-//        res = res.replaceAll("%", "%*");
-//        while (res.indexOf('π') != -1) {
-//            if (res.indexOf('π') == 0 || res.charAt(res.indexOf('π') - 1) == '+' || res.charAt(res.indexOf('π') - 1) == '*' || res.charAt(res.indexOf('π') - 1) == '/'
-//                    || res.charAt(res.indexOf('π') - 1) == '-' || res.charAt(res.indexOf('π') - 1) == '(') {
-//                res = res.replaceFirst("π", "pi");
-//            } else {
-//                res = res.replaceFirst("π", "*pi");
-//            }
-//        }
-//        expression.evalExpression = res;
-//        //End
-
         //Start
         //Create Basic Operation Button
         AppCompatButton sevenAdv = view.findViewById(R.id.sevenAdv);

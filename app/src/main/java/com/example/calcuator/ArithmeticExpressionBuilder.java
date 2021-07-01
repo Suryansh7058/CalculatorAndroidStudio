@@ -357,7 +357,6 @@ public class ArithmeticExpressionBuilder {
      *Begin Pop the last character
      *
      * */
-    @SuppressWarnings("DuplicateExpressions")
     public String pop(String expression) {
         if (evalExpression.isEmpty())
         {
@@ -445,11 +444,9 @@ public class ArithmeticExpressionBuilder {
     public void setCalcMode(String mode){
         if(mode.equals("DEG")){
             mXparser.setDegreesMode();
-            return;
         }
         else if(mode.equals("RAD")){
             mXparser.setRadiansMode();
-            return;
         }
     }
 
