@@ -43,8 +43,8 @@ public class ArithmeticExpressionBuilder {
                 || expression.charAt(expression.length() - 1) == '%' || expression.charAt(expression.length() - 1) == '(') {
             return expression;
         } else if (expression.charAt(expression.length() - 1) == '.') {
-            evalExpression += '0' + operator;
-            return expression + '0' + operator;
+            evalExpression += "0"+operator;
+            return expression + "0"+ operator;
         }
         if (operator == '%') {
             evalExpression += "%*";
@@ -69,9 +69,14 @@ public class ArithmeticExpressionBuilder {
     public String insertPi(String expression) {
         if (!expression.isEmpty() && (Character.isDigit(expression.charAt(expression.length() - 1)) || expression.charAt(expression.length() - 1) == 'π'
                 || expression.charAt(expression.length() - 1) == 'e' || expression.charAt(expression.length() - 1) == '!'
-                || expression.charAt(expression.length() - 1) == '^' || expression.charAt(expression.length() - 1) == ')')) {
+                || expression.charAt(expression.length() - 1) == ')')) {
             expression += "π";
             evalExpression += "*pi";
+            return expression;
+        }
+        else if (!expression.isEmpty() && expression.charAt(expression.length() - 1) == '.'){
+            evalExpression+="0*pi";
+            expression+="π";
             return expression;
         }
         evalExpression += "pi";
@@ -80,9 +85,15 @@ public class ArithmeticExpressionBuilder {
 
     public String insertEuler(String expression) {
         if (!expression.isEmpty() && (Character.isDigit(expression.charAt(expression.length() - 1)) || expression.charAt(expression.length() - 1) == 'π'
-                || expression.charAt(expression.length() - 1) == 'e')) {
+                || expression.charAt(expression.length() - 1) == 'e' || expression.charAt(expression.length() - 1) == '!'
+                || expression.charAt(expression.length() - 1) == ')')) {
             expression += "e";
             evalExpression += "*e";
+            return expression;
+        }
+        else if (!expression.isEmpty() && expression.charAt(expression.length() - 1) == '.'){
+            evalExpression+="0*e";
+            expression+="e";
             return expression;
         }
         evalExpression += "e";
@@ -145,6 +156,11 @@ public class ArithmeticExpressionBuilder {
                 || expression.charAt(expression.length() - 1) == '-' || expression.charAt(expression.length() - 1) == '+'
                 || expression.charAt(expression.length() - 1) == '%'
                 || expression.charAt(expression.length() - 1) == '(') {
+            return expression;
+        }
+        else if (expression.charAt(expression.length() - 1) == '.'){
+            evalExpression+="0^";
+            expression+="^";
             return expression;
         }
         evalExpression += "^";
@@ -233,6 +249,11 @@ public class ArithmeticExpressionBuilder {
             evalExpression += "*(";
             return expression + "(";
         }
+        else if (expression.charAt(expression.length() - 1) == '.'){
+            evalExpression+="0*(";
+            expression+="(";
+            return expression;
+        }
         evalExpression += "(";
         return expression + "(";
     }
@@ -244,6 +265,11 @@ public class ArithmeticExpressionBuilder {
             return expression;
         }
         openBracket--;
+        if (expression.charAt(expression.length() - 1) == '.'){
+            evalExpression+="0)";
+            expression+=")";
+            return expression;
+        }
         evalExpression += ")";
         return expression + ")";
 
@@ -273,6 +299,10 @@ public class ArithmeticExpressionBuilder {
                 || expression.charAt(expression.length() - 1) == 'e' || expression.charAt(expression.length() - 1) == '!'
                 || expression.charAt(expression.length() - 1) == ')')){
             evalExpression+="*"+trigono+"(";
+            return expression+trigono+"(";
+        }
+        else if ( !expression.isEmpty() &&  expression.charAt(expression.length() - 1) == '.'){
+            evalExpression+="0*"+trigono+"(";
             return expression+trigono+"(";
         }
         evalExpression += trigono+"(";
@@ -305,6 +335,10 @@ public class ArithmeticExpressionBuilder {
             evalExpression+="*"+mode+"(";
             return expression+mode+"(";
         }
+        else if (!expression.isEmpty() && expression.charAt(expression.length() - 1) == '.'){
+            evalExpression+="0*"+mode+"(";
+            return expression+mode+"(";
+        }
         evalExpression += mode+"(";
         return expression +mode+"(";
     }
@@ -333,7 +367,11 @@ public class ArithmeticExpressionBuilder {
                 || expression.charAt(expression.length() - 1) == 'e' || expression.charAt(expression.length() - 1) == '!'
                 || expression.charAt(expression.length() - 1) == ')')){
             evalExpression+="*sqrt(";
-            return expression+"*√(";
+            return expression+"√(";
+        }
+        else if (!expression.isEmpty() && expression.charAt(expression.length() - 1) == '.'){
+            evalExpression+="0*sqrt(";
+            return expression+"√(";
         }
         evalExpression += "sqrt(";
         return expression +"√(";
@@ -362,9 +400,12 @@ public class ArithmeticExpressionBuilder {
         {
             return expression;
         }
+        else  if(evalExpression.length()==1){
+            evalExpression="";
+            expression="";
+        }
 
-
-        else if (evalExpression.length() > 1 && evalExpression.charAt(evalExpression.length() - 2) == '%')
+        else if (evalExpression.charAt(evalExpression.length() - 2) == '%')
         {
             evalExpression = evalExpression.substring(0, evalExpression.length() - 2);
             expression = expression.substring(0, expression.length() - 1);
@@ -377,6 +418,14 @@ public class ArithmeticExpressionBuilder {
             evalExpression = evalExpression.substring(0, evalExpression.length() - 1);
             expression = expression.substring(0, expression.length() - 1);
         }
+//      POP ln
+        else if(evalExpression.charAt(evalExpression.length() - 1) == '(' && (evalExpression.charAt(evalExpression.length() - 3) == 'l'
+                && evalExpression.charAt(evalExpression.length() - 2) == 'n'))
+        {
+            openBracket--;
+            evalExpression = evalExpression.substring(0, evalExpression.length() - 3);
+            expression = expression.substring(0, expression.length() - 3);
+        }
         //      POP Trigonometric functions
         else if(evalExpression.charAt(evalExpression.length() - 1) == '('
                 && ((evalExpression.charAt(evalExpression.length() - 2) == 'n' && evalExpression.charAt(evalExpression.length() - 3 )== 'i') )
@@ -388,14 +437,6 @@ public class ArithmeticExpressionBuilder {
             expression = expression.substring(0, expression.length() - 4);
         }
 
-//      POP ln
-        else if(evalExpression.charAt(evalExpression.length() - 1) == '(' && (evalExpression.charAt(evalExpression.length() - 3) == 'l'
-                && evalExpression.charAt(evalExpression.length() - 2) == 'n'))
-        {
-            openBracket--;
-            evalExpression = evalExpression.substring(0, evalExpression.length() - 3);
-            expression = expression.substring(0, expression.length() - 3);
-        }
 
 //        POP Square Root
         else if(evalExpression.charAt(evalExpression.length() - 1) == '(' && (evalExpression.charAt(evalExpression.length() - 5) == 's'

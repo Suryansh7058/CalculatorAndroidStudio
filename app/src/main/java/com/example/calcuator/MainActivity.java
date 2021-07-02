@@ -8,11 +8,15 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.EditText;
+import android.widget.TextView;
+
 
 
 public class MainActivity extends AppCompatActivity {
     EditText arithmeticExpression;
+    TextView display_result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.add(R.id.frameLayout_keys, new fragment_main());
             fragmentTransaction.commit();
         }
+
         arithmeticExpression.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -50,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
                     arithmeticExpression.setTextSize(18);
             }
         });
-
+        display_result = findViewById(R.id.displayResult);
+        display_result.setSelected(true);
     }
 
 }

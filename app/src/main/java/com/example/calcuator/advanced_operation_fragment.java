@@ -339,6 +339,7 @@ public class advanced_operation_fragment extends Fragment {
             }
             String displayExp = arithmeticExpression.getText().toString();
             display_result.setText(displayExp);
+            adjustDisplayResult();
             setResultPanel(exp);
             equalClicked = true;
 
@@ -606,6 +607,15 @@ public class advanced_operation_fragment extends Fragment {
                 btn.setTextColor(Color.YELLOW);
             }
         }, 150);
+    }
+    public void adjustDisplayResult(){
+        int length = display_result.getText().toString().length();
+        if (length < 12)
+            display_result.setTextSize(48);
+        else if (length > 12 && length < 20)
+            display_result.setTextSize(30);
+        else if (length > 20)
+            display_result.setTextSize(18);
     }
 
 }
